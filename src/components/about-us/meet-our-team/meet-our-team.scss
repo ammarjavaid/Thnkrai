@@ -1,0 +1,69 @@
+@import "../../../general-style/variable";
+
+.meet-our-team {
+  background-color: $sectionBG;
+  padding: 100px 0;
+
+  h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+    span {
+      color: $primaryColor;
+    }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    .myCard {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 7px 29px 0 hsla(240, 5%, 41%, 0.2);
+      border-radius: 10px;
+      .myCard-left {
+        .img {
+          width: 200px;
+          height: 240px;
+          img {
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            object-fit: cover;
+          }
+        }
+      }
+      .myCard-right {
+        padding-right: 30px;
+        position: relative;
+        h4 {
+          font-size: 20px;
+          font-family: $fontFamily;
+        }
+        p {
+          font-family: $fontFamily;
+          text-align: justify;
+          margin-bottom: 30px;
+          font-size: 12px;
+        }
+        h6 {
+          font-family: $fontFamily;
+          font-weight: 500;
+          color: $primaryColor;
+          font-size: 14px;
+        }
+        .icon {
+          position: absolute;
+          top: -20px;
+          right: 20px;
+          font-size: 20px;
+          color: $thirdColor;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

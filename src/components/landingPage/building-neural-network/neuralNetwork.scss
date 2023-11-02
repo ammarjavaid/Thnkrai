@@ -1,0 +1,48 @@
+@import "../../../general-style/variable";
+
+.neuralNetwork {
+  background-image: url("../../assets/svg/nural-bg.jpg");
+  padding: 80px 0;
+  h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: $whiteColor;
+    span {
+      color: $primaryColor;
+    }
+  }
+  .neuralNetwork-content {
+    display: flex;
+    gap: 50px;
+    .neuralNetwork-content-left {
+      background-color: $whiteColor;
+      border-radius: 10px;
+      padding: 40px;
+      h2 {
+        font-family: $fontFamily;
+        font-size: 29px;
+        span {
+          color: $primaryColor;
+        }
+      }
+      p {
+        font-family: $fontFamily;
+        text-align: justify;
+      }
+
+      .btn {
+        padding: 0;
+        margin-top: 20px;
+      }
+    }
+    .neuralNetwork-content-right {
+      width: 100%;
+      height: 400px;
+      img {
+        width: 100%;
+        height: 100%;
+        // object-fit: cover;
+      }
+    }
+  }
+}

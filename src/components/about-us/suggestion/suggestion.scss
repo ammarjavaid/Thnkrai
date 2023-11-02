@@ -1,0 +1,74 @@
+@import "../../../general-style/variable";
+
+.suggestion {
+  background-color: $secondaryColor;
+  position: relative;
+  .img {
+    position: relative;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .content {
+    max-width: 82% !important;
+    // height: 300px;
+    margin: auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    gap: 40px;
+    .box {
+      background-color: rgba(150, 150, 150, 0.493);
+      border-radius: 10px;
+      padding: 50px 20px;
+      color: $whiteColor;
+      height: 250px;
+      h2 {
+        margin-bottom: 10px;
+        font-family: $fontFamily;
+        font-size: 20px;
+      }
+      p {
+        font-size: 13px;
+        font-family: $fontFamily;
+      }
+    }
+  }
+}
+
+.awssld__content {
+  background-color: none !important;
+}
+
+.awssld__timer {
+  display: none !important;
+}
+
+.slick-slider {
+  // width: 35% !important;
+  overflow: hidden;
+  // background-color: red !important;
+  width: 1300px !important;
+}
+
+.carousel__review {
+  overflow: hidden !important;
+}
+
+.slick-track {
+  display: flex !important;
+  align-items: center !important;
+  gap: 30px !important;
+}

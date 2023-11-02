@@ -1,0 +1,90 @@
+@import "../../../general-style/variable";
+
+.join-us-form {
+  background-color: $sectionBG;
+  .content {
+    display: flex;
+    width: 100%;
+    padding: 5rem 0;
+    .content-left {
+      width: 50%;
+      padding-right: 100px;
+      h3 {
+        font-size: 22px;
+        font-family: $fontFamily;
+        span {
+          color: $primaryColor;
+          font-family: $fontFamily;
+        }
+      }
+      p {
+        font-size: 14px;
+        font-family: $fontFamily;
+        text-align: justify;
+        padding-bottom: 10px;
+      }
+      .address {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-family: $fontFamily;
+        font-size: 13px;
+        margin-bottom: 10px;
+        .address-icon {
+          font-size: 20px;
+          color: $primaryColor;
+        }
+      }
+      .email {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        font-family: $fontFamily;
+        .email-icon {
+          font-size: 16px;
+          color: $primaryColor;
+        }
+      }
+    }
+    .content-right {
+      width: 50%;
+      padding: 0 50px;
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .input-group {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+          label {
+            font-family: $fontFamily;
+            font-weight: 600;
+            font-size: 16px;
+          }
+          .input {
+            height: 45px;
+            padding: 0 10px;
+            background: transparent;
+            border: 1px solid $secondaryColor;
+            border-radius: 8px !important;
+            font-family: $fontFamily;
+            font-size: 12px;
+            color: $secondaryColor;
+            &::placeholder {
+              font-size: 12px;
+              font-family: $fontFamily;
+            }
+            &:focus {
+              outline: $primaryColor;
+            }
+          }
+        }
+      }
+      .btn-contact {
+        margin-top: 20px;
+      }
+    }
+  }
+}

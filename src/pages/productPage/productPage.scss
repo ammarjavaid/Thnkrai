@@ -1,0 +1,227 @@
+@import "../../general-style/variable";
+
+.product-page {
+  background-color: #f5f1f5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .product-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .product-header-left {
+      width: 50%;
+      h1 {
+        font-size: 32px;
+        font-family: $fontFamily;
+        span {
+          color: $primaryColor;
+          font-family: $fontFamily;
+        }
+      }
+      p {
+        font-family: $fontFamily;
+        text-align: justify;
+      }
+    }
+  }
+
+  .product-header-right {
+    width: 50%;
+    .img {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        animation: upDown 4s ease-in-out infinite;
+      }
+    }
+    @keyframes upDown {
+      0%,
+      100% {
+        transform: translateY(0); // Start and end position
+      }
+      50% {
+        transform: translateY(-20px); // Move the image up
+      }
+    }
+  }
+}
+
+.product-page-video-section {
+  background-color: #f5f1f5;
+  padding-bottom: 4rem;
+  .video-section {
+    text-align: center;
+
+    h1 {
+      font-size: 32px;
+      font-family: $fontFamily;
+      padding: 0 20%;
+      span {
+        font-family: $fontFamily;
+        color: $primaryColor;
+      }
+    }
+    p {
+      font-family: $fontFamily;
+      padding-bottom: 2rem !important;
+      padding: 0 20%;
+    }
+
+    .videos {
+      width: 80%;
+      margin: auto;
+      height: 50vh;
+      border: 2px solid #cecdce;
+      border-radius: 20px;
+      position: relative;
+      box-shadow: 0 7px 29px 0 hsla(240, 5%, 41%, 0.2);
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        border-radius: 20px;
+        left: 0;
+      }
+      video {
+        width: 100%;
+        border-radius: 20px;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.product-page-pricing-section {
+  background-color: #f5f1f5;
+  padding-bottom: 8rem;
+  padding-top: 4rem;
+  .pricing-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .pricing-section-left {
+      width: 50%;
+      .img {
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .pricing-section-right {
+      width: 50%;
+      h1 {
+        font-size: 32px;
+        font-family: $fontFamily;
+        span {
+          font-family: $fontFamily;
+          color: $primaryColor;
+        }
+      }
+      p {
+        font-family: $fontFamily;
+        text-align: justify;
+        padding-right: 120px;
+      }
+    }
+  }
+}
+
+.product-page-ai-video {
+  position: relative;
+  .videos {
+    width: 100%;
+    margin: auto;
+    height: 50vh;
+    position: relative;
+    // box-shadow: 0 7px 29px 0 hsla(240, 5%, 41%, 0.2);
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      // border-radius: 20px;
+      left: 0;
+    }
+    video {
+      width: 100%;
+      // border-radius: 20px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    p {
+      color: $whiteColor;
+      text-align: justify;
+      font-family: $fontFamily;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.product-page-last {
+  background-color: #f5f1f5;
+  padding: 4rem 0;
+  .last-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .last-content-left {
+      width: 50%;
+      h1 {
+        font-size: 32px;
+        font-family: $fontFamily;
+        span {
+          color: $primaryColor;
+          font-family: $fontFamily;
+        }
+      }
+      p {
+        font-family: $fontFamily;
+        text-align: justify;
+      }
+    }
+    .last-content-right {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      .img {
+        width: 300px;
+        height: 300px;
+        img {
+          width: 100%;
+          height: 100%;
+          animation: upDown 4s ease-in-out infinite;
+        }
+      }
+      @keyframes upDown {
+        0%,
+        100% {
+          transform: translateY(0); // Start and end position
+        }
+        50% {
+          transform: translateY(-20px); // Move the image up
+        }
+      }
+    }
+  }
+}
