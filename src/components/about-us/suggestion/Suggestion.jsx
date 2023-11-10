@@ -10,33 +10,11 @@ import Slider from "react-slick";
 import { Carousel } from "antd";
 
 const Suggestion = () => {
-  // const sliderSettings = {
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   infinite: false,
-  // };
-
   const onChange = (currentSlide) => {
     console.log(currentSlide);
   };
 
   const carouselRef = useRef();
-
-  // const handleNext = () => {
-  //   carouselRef.current.next();
-  // };
-
-  // const handlePrev = () => {
-  //   carouselRef.current.prev();
-  // };
-
-  // const settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 2,
-  //   slidesToScroll: 1,
-  // };
 
   return (
     <>

@@ -8,12 +8,14 @@
     margin-bottom: 20px;
     padding-left: 40px;
     color: $secondaryColor;
-    // color: $whiteColor;
     span {
       color: $primaryColor;
     }
     @media screen and (max-width: 768px) {
       padding: 0;
+    }
+    @media screen and (max-width: 540px) {
+      font-size: 32px;
     }
   }
   .neuralNetwork-content {
@@ -36,12 +38,15 @@
           color: $primaryColor;
         }
         @media screen and (max-width: 440px) {
-          font-size: 24px;
+          font-size: 22px;
         }
       }
       p {
         font-family: $fontFamily;
         text-align: justify;
+        @media screen and (max-width: 540px) {
+          font-size: 12px;
+        }
       }
 
       .btn {

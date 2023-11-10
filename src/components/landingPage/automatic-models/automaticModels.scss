@@ -13,6 +13,9 @@
     @media screen and (max-width: 540px) {
       font-size: 35px;
     }
+    @media screen and (max-width: 540px) {
+      font-size: 32px;
+    }
   }
   .automaticModels-content {
     display: flex;
@@ -35,6 +38,9 @@
       p {
         font-family: $fontFamily;
         text-align: justify;
+        @media screen and (max-width: 540px) {
+          font-size: 12px;
+        }
       }
 
       .btn {

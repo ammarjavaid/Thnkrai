@@ -42,6 +42,9 @@
         color: $secondaryColor;
         font-family: $fontFamily;
         margin-bottom: 60px;
+        @media screen and (max-width: 540px) {
+          font-size: 12px;
+        }
       }
     }
     .content-right {

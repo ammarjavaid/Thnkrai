@@ -9,6 +9,9 @@
     span {
       color: $thirdColor;
     }
+    @media screen and (max-width: 540px) {
+      font-size: 32px;
+    }
   }
   .pricing-content {
     display: flex;
@@ -38,6 +41,7 @@
           @media screen and (max-width: 540px) {
             width: 90%;
             margin: auto;
+            font-size: 12px;
           }
         }
         .desc-box {
@@ -51,14 +55,15 @@
           border-radius: 10px;
           position: relative;
           @media screen and (max-width: 540px) {
-            // flex-direction: column;
-            // align-items: flex-start;
             width: 90%;
             margin: auto;
           }
           .desc {
             font-size: 14px;
             font-weight: 500;
+            @media screen and (max-width: 540px) {
+              font-size: 12px;
+            }
           }
           .icon-img {
             width: 40px;
