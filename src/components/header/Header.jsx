@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./header.scss";
-import { LoginBG, LogoBG } from "../../assets";
+import { LoginBG, Logo1, LogoBG } from "../../assets";
 import { useNavigate } from "react-router-dom";
+import { Drawer } from "antd";
+import { HiOutlineBars4 } from "react-icons/hi2";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -21,13 +23,29 @@ const Header = () => {
     }
   };
 
+  const [open, setOpen] = useState(false);
+  const [placement, setPlacement] = useState("left");
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
+  const onChange = (e) => {
+    setPlacement(e.target.value);
+  };
+
   return (
     <>
       <div className="container">
         <div className="header">
           <div className="header-left">
-            <img src={LogoBG} alt="" />
-            <div className="logo">ThnkrAI</div>
+            {/* <img src={LogoBG} alt="" /> */}
+            <div className="img">
+              <img src={Logo1} alt="" />
+            </div>
+
+            {/* <div className="logo"></div> */}
           </div>
           <div className="header-center">
             <p
@@ -57,11 +75,58 @@ const Header = () => {
           </div>
 
           <div className="header-right">
+            <HiOutlineBars4 onClick={showDrawer} className="bar-icon" />
             <img src={LoginBG} alt="" />
             <p>Login</p>
           </div>
         </div>
       </div>
+
+      <Drawer
+        title=""
+        placement={placement}
+        closable={false}
+        onClose={onClose}
+        open={open}
+        key={placement}
+      >
+        <p
+          onClick={() => {
+            handleClick("home");
+            onClose();
+          }}
+          className={activeClass === "home" ? "active" : ""}
+        >
+          Home
+        </p>
+        <p
+          onClick={() => {
+            handleClick("about");
+            onClose();
+          }}
+          className={activeClass === "about" ? "active" : ""}
+        >
+          About us
+        </p>
+        <p
+          onClick={() => {
+            handleClick("Join us");
+            onClose();
+          }}
+          className={activeClass === "Join us" ? "active" : ""}
+        >
+          Join us
+        </p>
+        <p
+          onClick={() => {
+            handleClick("product");
+            onClose();
+          }}
+          className={activeClass === "product" ? "active" : ""}
+        >
+          Product
+        </p>
+      </Drawer>
     </>
   );
 };

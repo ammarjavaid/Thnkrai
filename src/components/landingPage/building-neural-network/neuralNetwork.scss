@@ -6,23 +6,37 @@
   h1 {
     font-size: 40px;
     margin-bottom: 20px;
-    color: $whiteColor;
+    padding-left: 40px;
+    color: $secondaryColor;
+    // color: $whiteColor;
     span {
       color: $primaryColor;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 0;
     }
   }
   .neuralNetwork-content {
     display: flex;
     gap: 50px;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
     .neuralNetwork-content-left {
       background-color: $whiteColor;
       border-radius: 10px;
       padding: 40px;
+      @media screen and (max-width: 768px) {
+        padding: 10px;
+      }
       h2 {
         font-family: $fontFamily;
         font-size: 29px;
         span {
           color: $primaryColor;
+        }
+        @media screen and (max-width: 440px) {
+          font-size: 24px;
         }
       }
       p {

@@ -6,6 +6,7 @@ import {
   AiFillLinkedin,
 } from "react-icons/ai";
 import Button from "../../common/button/Button";
+import { LogoFooter } from "../../assets";
 
 const Footer = () => {
   return (
@@ -14,7 +15,10 @@ const Footer = () => {
         <div className="container">
           <div className="footer-content">
             <div className="footer-col">
-              <h1> ThnkrAi </h1>
+              {/* <h1> ThnkrAi </h1> */}
+              <div className="img">
+                <img src={LogoFooter} alt="" />
+              </div>
               <p className="description">
                 Ongoing research and development in AI to advance its
                 capabilities and applications, AI technology is crucial for

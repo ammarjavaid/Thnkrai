@@ -46,16 +46,6 @@ const Suggestion = () => {
         </div>
         <div className="container">
           <div className="content">
-            {/* <Carousel
-              autoPlay={true}
-              interval={3000}
-              infiniteLoop={true}
-              showArrows={false}
-              showStatus={false}
-              showIndicators={false}
-              swipeable={true}
-            > */}
-            {/* <Slider {...settings}> */}
             <Carousel
               afterChange={onChange}
               slidesToShow={2}
@@ -65,9 +55,15 @@ const Suggestion = () => {
               className="carousel__review"
               responsive={[
                 {
+                  breakpoint: 992,
+                  settings: {
+                    slidesToShow: 1,
+                  },
+                },
+                {
                   breakpoint: 768,
                   settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                   },
                 },
                 {
@@ -85,8 +81,6 @@ const Suggestion = () => {
                 </div>
               ))}
             </Carousel>
-            {/* </Slider> */}
-            {/* </Carousel> */}
           </div>
         </div>
       </div>

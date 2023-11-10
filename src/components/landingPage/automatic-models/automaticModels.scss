@@ -10,10 +10,16 @@
     span {
       color: $primaryColor;
     }
+    @media screen and (max-width: 540px) {
+      font-size: 35px;
+    }
   }
   .automaticModels-content {
     display: flex;
     gap: 50px;
+    @media screen and (max-width: 992px) {
+      flex-direction: column-reverse;
+    }
 
     .automaticModels-content-left {
       background-color: $whiteColor;
@@ -39,6 +45,11 @@
     .automaticModels-content-right {
       width: 780px;
       height: 450px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
       img {
         width: 100%;
         height: 100%;

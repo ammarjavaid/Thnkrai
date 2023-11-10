@@ -5,7 +5,7 @@
   background-color: #292a2f;
   // background-color: $secondaryColor;
   color: $whiteColor;
-  height: 10vh;
+  // height: 10vh;
   // margin-top: -7px;
 
   .our-solution-content {
@@ -16,6 +16,12 @@
       width: 30%;
       font-size: 20px;
       position: relative;
+      @media screen and (max-width: 1360px) {
+        width: 40%;
+      }
+      @media screen and (max-width: 1200px) {
+        width: 50%;
+      }
     }
 
     ul {
