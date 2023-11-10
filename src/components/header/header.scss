@@ -18,7 +18,7 @@
     top: 3%;
   }
   .header-left {
-    border-radius: 7px;
+    border-radius: 8px;
     position: relative;
     cursor: pointer;
     border: 1px solid rgba(224, 224, 224, 0.7);
@@ -151,6 +151,27 @@
         width: 35px;
         height: 35px;
         padding: 5px;
+        border-radius: 6px;
+      }
+      @media screen and (max-width: 540px) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.ant-drawer-content {
+  background-color: $secondaryColor !important;
+  color: $whiteColor;
+  img {
+    width: 150px;
+    margin-bottom: 2rem;
+  }
+  .ant-drawer-wrapper-body {
+    .ant-drawer-body {
+      p {
+        padding: 1rem 10px;
       }
     }
   }

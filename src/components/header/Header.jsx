@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./header.scss";
-import { LoginBG, Logo1, LogoBG } from "../../assets";
+import { LoginBG, Logo1, LogoBG, LogoFooter } from "../../assets";
 import { useNavigate } from "react-router-dom";
 import { Drawer } from "antd";
 import { HiOutlineBars4 } from "react-icons/hi2";
@@ -90,6 +90,7 @@ const Header = () => {
         open={open}
         key={placement}
       >
+        <img src={LogoFooter} alt="" />
         <p
           onClick={() => {
             handleClick("home");
