@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./footer.scss";
 import {
   AiOutlineTwitter,
@@ -7,8 +7,51 @@ import {
 } from "react-icons/ai";
 import Button from "../../common/button/Button";
 import { LogoFooter } from "../../assets";
+import $ from "jquery";
 
 const Footer = () => {
+  const SendMain = () => {
+    let email = $("#contact-2-email").val();
+    let subject = $("#contact-2-subject").val();
+    let message = $("#message").val();
+
+    if (name === "" || email === "" || subject === "" || message === "") {
+      $(".infoForm").slideDown().delay(3000).slideUp();
+    } else {
+      $(".done").slideDown().delay(2000).slideUp();
+
+      $.ajax({
+        method: "POST",
+        url: "https://formsubmit.co/ajax/shamimujeeb623@gmail.com",
+        dataType: "json",
+        accepts: "application/json",
+        data: {
+          Email: email,
+          Subject: subject,
+          Message: message,
+        },
+        success: (data) => {
+          console.log(data, "data");
+          $(".thankyou").slideDown().delay(2000).slideUp();
+
+          document.getElementById("myform").reset();
+        },
+        error: (err) => {
+          $(".error").slideDown().delay(3000).slideUp();
+          console.log("error");
+        },
+      });
+    }
+  };
+
+  const submit = (e) => {
+    e.preventDefault();
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="footer">
@@ -41,18 +84,36 @@ const Footer = () => {
             </div>
             <div className="footer-col">
               <h3> Contact us </h3>
-              <div className="input-fields">
-                <input type="text" placeholder="Enter" />
-                <input type="text" placeholder="Subject" />
-                <textarea rows={3} cols={2} placeholder="Message..." />
+              <form onSubmit={submit}>
+                <input
+                  type="email"
+                  placeholder="Enter Email"
+                  name="email"
+                  id="contact-2-email"
+                />
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  name="subject"
+                  id="contact-2-subject"
+                />
+                <textarea
+                  rows={3}
+                  cols={2}
+                  placeholder="Message..."
+                  name="message"
+                  id="message"
+                />
                 <div className="btn">
-                  <Button> Submit </Button>
+                  <Button type="submit" onClick={SendMain}>
+                    Submit
+                  </Button>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
           <div className="all-rights">
-            <p> By © ThnkrAI Inc. All Rights Reserved. founders@thnkrai.com </p>
+            <p> By © ThnkrAI Inc. All Rights Reserved. contact@thnkrai.com </p>
             <div className="icons">
               <AiOutlineTwitter className="icon" />
               <AiOutlineInstagram className="icon" />

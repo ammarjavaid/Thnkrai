@@ -38,19 +38,30 @@
         font-size: 13px;
         margin-bottom: 10px;
         .address-icon {
+          background-color: $primaryColor;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          padding: 6px;
           font-size: 20px;
-          color: $primaryColor;
+          color: $whiteColor;
         }
       }
       .email {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 6px;
         font-size: 13px;
         font-family: $fontFamily;
         .email-icon {
-          font-size: 16px;
-          color: $primaryColor;
+          // background-color: black;
+          background-color: $primaryColor;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          padding: 6px;
+          font-size: 7px !important;
+          color: $whiteColor;
         }
       }
     }
@@ -62,7 +73,7 @@
         padding: 0;
         margin-top: 30px;
       }
-      .form {
+      form {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -91,6 +102,11 @@
             &:focus {
               outline: $primaryColor;
             }
+          }
+          .error {
+            font-family: $fontFamily;
+            color: red;
+            font-size: 11px;
           }
         }
       }
