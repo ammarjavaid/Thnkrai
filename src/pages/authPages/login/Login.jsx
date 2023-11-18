@@ -9,6 +9,7 @@ const Login = () => {
       {/* <AuthHeader /> */}
       <div className="login">
         <form>
+          <h2> Login </h2>
           <div className="input-group">
             <label> Email </label>
             <input type="email" placeholder="username@email.com" />
