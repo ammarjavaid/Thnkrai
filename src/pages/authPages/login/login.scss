@@ -1,0 +1,43 @@
+@import "../../../general-style/variable";
+
+.login {
+  background-color: #f4f4f4;
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  form {
+    background-color: white;
+    width: 50%;
+    padding: 10px 30px;
+    border-radius: 5px;
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      label {
+        font-family: $fontFamily;
+        font-weight: 600;
+      }
+      input {
+        padding: 10px 10px;
+        border: none;
+        font-size: 12px;
+        border: 1px solid #f4f4f4;
+        &::placeholder {
+          font-size: 12px;
+          font-family: $fontFamily;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .login-btn {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

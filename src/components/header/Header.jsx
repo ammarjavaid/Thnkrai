@@ -74,7 +74,7 @@ const Header = () => {
             </p>
           </div>
 
-          <div className="header-right">
+          <div className="header-right" onClick={() => navigate("/login")}>
             <HiOutlineBars4 onClick={showDrawer} className="bar-icon" />
             <img src={LoginBG} alt="" />
             <p>Login</p>
