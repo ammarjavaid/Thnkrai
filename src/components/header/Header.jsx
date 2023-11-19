@@ -74,10 +74,10 @@ const Header = () => {
             </p>
           </div>
 
-          <div className="header-right" onClick={() => navigate("/login")}>
+          <div className="header-right">
             <HiOutlineBars4 onClick={showDrawer} className="bar-icon" />
-            <img src={LoginBG} alt="" />
-            <p>Login</p>
+            <img src={LoginBG} alt="" onClick={() => navigate("/login")} />
+            <p onClick={() => navigate("/login")}>Login</p>
           </div>
         </div>
       </div>
@@ -90,43 +90,54 @@ const Header = () => {
         open={open}
         key={placement}
       >
-        <img src={LogoFooter} alt="" />
-        <p
+        <div className="top-items">
+          <img src={LogoFooter} alt="" />
+          <p
+            onClick={() => {
+              handleClick("home");
+              onClose();
+            }}
+            className={activeClass === "home" ? "active" : ""}
+          >
+            Home
+          </p>
+          <p
+            onClick={() => {
+              handleClick("about");
+              onClose();
+            }}
+            className={activeClass === "about" ? "active" : ""}
+          >
+            About us
+          </p>
+          <p
+            onClick={() => {
+              handleClick("Join us");
+              onClose();
+            }}
+            className={activeClass === "Join us" ? "active" : ""}
+          >
+            Join us
+          </p>
+          <p
+            onClick={() => {
+              handleClick("product");
+              onClose();
+            }}
+            className={activeClass === "product" ? "active" : ""}
+          >
+            Product
+          </p>
+        </div>
+        <div
+          className="login-btn"
           onClick={() => {
-            handleClick("home");
+            navigate("/login");
             onClose();
           }}
-          className={activeClass === "home" ? "active" : ""}
         >
-          Home
-        </p>
-        <p
-          onClick={() => {
-            handleClick("about");
-            onClose();
-          }}
-          className={activeClass === "about" ? "active" : ""}
-        >
-          About us
-        </p>
-        <p
-          onClick={() => {
-            handleClick("Join us");
-            onClose();
-          }}
-          className={activeClass === "Join us" ? "active" : ""}
-        >
-          Join us
-        </p>
-        <p
-          onClick={() => {
-            handleClick("product");
-            onClose();
-          }}
-          className={activeClass === "product" ? "active" : ""}
-        >
-          Product
-        </p>
+          Login
+        </div>
       </Drawer>
     </>
   );

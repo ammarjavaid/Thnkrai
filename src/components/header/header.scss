@@ -164,6 +164,12 @@
 .ant-drawer-content {
   background-color: $secondaryColor !important;
   color: $whiteColor;
+
+  .ant-drawer-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   img {
     width: 150px;
     margin-bottom: 2rem;

@@ -7,6 +7,8 @@ import JoinUs from "../pages/join-us/JoinUs";
 import ProductPage from "../pages/productPage/ProductPage";
 import Login from "../pages/authPages/login/Login";
 import AuthHeader from "../pages/authPages/authHeader/AuthHeader";
+import Signup from "../pages/authPages/signup/Signup";
+import ResetPassword from "../pages/authPages/resetPassword/ResetPassword";
 
 const HomeRoutes = () => {
   return (
@@ -48,6 +50,8 @@ const HomeRoutes = () => {
             }
           />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
         </Routes>
         {/* </Layout> */}
       </BrowserRouter>

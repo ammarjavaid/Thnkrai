@@ -50,3 +50,6 @@ export { default as CardP2 } from "../assets/svg/card-p-2.png";
 export { default as Diamond } from "../assets/svg/diamond.png";
 
 export { default as Commas } from "../assets/svg/Commas.svg";
+
+// auth bg
+export { default as AuthBG } from "../assets/svg/bg.png";

@@ -1,47 +1,96 @@
 @import "../../../general-style/variable";
 
-.login {
-  background-color: #f4f4f4;
+.main-bg {
+  background-image: url(../../../assets/svg/bg.png);
   height: 100vh;
-  display: flex;
   width: 100%;
-  justify-content: center;
-  align-items: center;
-  form {
-    background-color: white;
-    width: 50%;
-    padding: 40px 30px;
-    border-radius: 5px;
-    h2 {
-      text-align: center;
-      padding-bottom: 20px;
-    }
-    .input-group {
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-      label {
-        font-family: $fontFamily;
-        font-weight: 600;
+  .login {
+    // background-color: #f4f4f4;
+    height: 91vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    form {
+      background-color: rgb(241, 241, 241);
+      width: 50%;
+      padding: 40px 30px 20px 30px;
+      border-radius: 5px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      @media screen and (max-width: 540px) {
+        width: 95%;
       }
-      input {
-        padding: 10px 10px;
-        border: none;
-        font-size: 12px;
-        border: 1px solid #f4f4f4;
-        &::placeholder {
-          font-size: 12px;
+      h2 {
+        text-align: center;
+        padding-bottom: 20px;
+        font-size: 24px;
+      }
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        label {
           font-family: $fontFamily;
+          font-weight: 600;
         }
-        &:focus {
-          outline: none;
+        input {
+          padding: 10px 10px;
+          border: none;
+          font-size: 12px;
+          border: 1px solid #f4f4f4;
+          &::placeholder {
+            font-size: 12px;
+            font-family: $fontFamily;
+          }
+          &:focus {
+            outline: none;
+          }
         }
       }
-    }
-    .login-btn {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
+
+      .forget-password {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-top: 10px;
+        a {
+          text-decoration: none;
+          font-family: $fontFamily;
+          color: $primaryColor;
+          font-weight: 600;
+          font-size: 13px;
+        }
+      }
+
+      .login-btn {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+      }
+      p {
+        text-align: center;
+        padding-top: 30px;
+        font-family: $fontFamily;
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .already-account {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 40px;
+        .new-user {
+          padding-top: 0;
+        }
+        a {
+          text-decoration: none;
+          font-family: $fontFamily;
+          color: $secondaryColor;
+          font-size: 13px;
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }
